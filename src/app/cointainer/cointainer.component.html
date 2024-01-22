@@ -1,0 +1,28 @@
+
+<app-search (searchTextChanged)="setSearchText($event)"></app-search>
+<app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+<app-product-details *ngIf="productListComponent.selectedProduct"[productListComp]="productListComponpent"></app-product-details>
+
+<div class="cointainer">
+    <div class="featured-products">
+     <div class="product-heading">
+              <h1>Latest Arrival in popular brands</h1>
+         </div>
+
+      <app-featured-brands>
+        <h3 class="title">New Arrival in Nike</h3>
+        <button class="call-to-action">Show Me Arrivals in Nike</button>
+      </app-featured-brands>
+
+      <app-featured-brands>
+        <h3 class="title">New Arrival in Addidas</h3>
+        <button class="call-to-action">Show Me Arrivals in Addidas</button>
+      </app-featured-brands>
+
+      <app-featured-brands>
+        <h3 class="title">New Arrival in Rebook</h3>
+        <button class="call-to-action">Show Me Arrivals in Rebook</button>
+      </app-featured-brands>
+    </div>
+</div>
+
